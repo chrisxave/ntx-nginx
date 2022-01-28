@@ -24,7 +24,7 @@ spec:
       name: chris-nginx-2
     spec:
       containers:
-      - image: registry.nutanix.com:5000/chris-nginx-2:latest
+      - image: registry.nutanix.com:5000/chris-nginx-2:3.0
         imagePullPolicy: IfNotPresent
         name: chris-nginx-2
         resources: {}
