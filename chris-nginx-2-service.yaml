@@ -15,6 +15,6 @@ spec:
   selector:
     k8s-app: chris-nginx-2
   sessionAffinity: None
-  type: NodePort
+  type: ClusterIP
 status:
   loadBalancer: {}
