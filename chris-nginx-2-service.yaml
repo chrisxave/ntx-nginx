@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-01-28T11:20:30Z"
+  labels:
+    k8s-app: chris-nginx-2
+  name: chris-nginx-2
+  namespace: chris-namespace
+  resourceVersion: "109240"
+  uid: ddd7487c-bc91-44ba-9503-1ac5e7b382f3
+spec:
+  clusterIP: 172.19.54.6
+  clusterIPs:
+  - 172.19.54.6
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: tcp-8123-80-z69vc
+    nodePort: 31238
+    port: 8123
+    protocol: TCP
+    targetPort: 80
+  selector:
+    k8s-app: chris-nginx-2
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
