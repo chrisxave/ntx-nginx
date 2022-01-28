@@ -5,7 +5,7 @@ kind: Secret
 metadata:
   creationTimestamp: "2022-01-28T10:57:51Z"
   name: regcred
-  namespace: default
+  namespace: cd-chris-nginx
   resourceVersion: "107023"
   uid: 99962c03-f57c-4a95-af90-e414d835a8a8
 type: kubernetes.io/dockerconfigjson
