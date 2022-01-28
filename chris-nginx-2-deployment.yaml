@@ -2,16 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    k8s-app: cd-chris-nginx-2
-  name: cd-chris-nginx-2
+    k8s-app: chris-nginx-2
+  name: chris-nginx-2
   namespace: cd-chris-nginx
 spec:
   progressDeadlineSeconds: 600
   replicas: 2
-  revisionHistoryLimit: 10
   selector:
     matchLabels:
-      k8s-app: cd-chris-nginx-2
+      k8s-app: chris-nginx-2
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -27,7 +26,7 @@ spec:
       containers:
       - image: registry.nutanix.com:5000/chris-nginx-2:1.0
         imagePullPolicy: IfNotPresent
-        name: cd-chris-nginx-2
+        name: chris-nginx-2
         resources: {}
         securityContext:
           privileged: false
