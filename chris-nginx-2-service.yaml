@@ -8,12 +8,13 @@ metadata:
 spec:
   ports:
   - name: tcp-8123-80-z69vc
+    nodePort: 54321
     port: 8123
     protocol: TCP
     targetPort: 80
   selector:
     k8s-app: chris-nginx-2
   sessionAffinity: None
-  type: ClusterIP
+  type: NodePort
 status:
   loadBalancer: {}
